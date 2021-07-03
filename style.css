@@ -1,0 +1,12 @@
+*{
+    margin:0;
+    padding:0;
+}
+.main{
+    display: block;
+    width:80%;
+    text-align: center;
+    min-height:400px;
+    background-color: coral;
+    float: center;
+}
