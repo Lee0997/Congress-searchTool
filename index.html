@@ -12,27 +12,48 @@
 </head>
 
 <body class="flex-column min-100-vh">
-    <div class="main">
-  <header class="hero">
-    <h1 class="app-title">
-      Library of Congress Search Engine 
-    </h1>
-  </header>
+
+ <main class="main">
+    <header class="hero">
+        <h1 class="app-title">
+        Library of Congress Search Engine 
+        </h1>
+    </header>
 
 
-    <div class="col-12 col-md-4">
+        <div class="col-12 col-md-4">
 
-      <div class="card">
-        <h3 class="card-header text-uppercase">Search By User</h3>
-        <form id="user-form" class="card-body">
-          <label class="form-label" for="username"></label>
-          <input name="username" id="username" type="text" autofocus="true" class="form-input" />
-          <div>
-           <button type="submit" class="btn">Click  Me</button>
-             
-          </div>
-        </form>
-      </div>
+        <div class="card">
+            <h3 class="card-header text-uppercase">Search By User</h3>
+            <form id="user-form" class="card-body">
+            <label class="form-label" for="city"></label>
+            <input name="city" id="city" type="text" autofocus="true" class="form-input" />
+            
+            <div>
+                <label for="format">Choose a format:</label>
+
+                <select id="formats">
+                <option value="maps">maps</option>
+                <option value="audio">audio recordings</option>
+                <option value="photos">photo, print, drawing</option>
+                <option value="manuscripts">manuscripts/mixed material</option>
+                <option value="newspapers">newspapers</option>
+                <option value="film-and-videos">film, videos</option>
+                <option value="notated-music">printed music, such as sheet music</option>
+                <option value="websites">archived websites</option>
+
+                <option value="maps">maps</option>
+
+
+                </select>
+            </div>
+            
+            <div>
+            <button type="submit" class="btn">Click  Me</button>
+                
+            </div>
+            </form>
+        </div>
 
     
   </main>
