@@ -6,19 +6,19 @@ var languageButtonsEl = document.querySelector('#language-buttons');
 var nameInputEl = document.querySelector('#username');
 var repoContainerEl = document.querySelector('#repos-container');
 var repoSearchTerm = document.querySelector('#repo-search-term');
-
+var format=document.querySelector('#formats')
 var formSubmitHandler = function (event) {
   event.preventDefault();
 
-  var username = nameInputEl.value.trim();
+  var city = nameInputEl.value.trim();
 
-  if (username) {
-    getUserRepos(username);
+  if (city) {
+    getCityInfo(city,format);
 
     repoContainerEl.textContent = '';
     nameInputEl.value = '';
   } else {
-    alert('Please enter a GitHub username');
+    alert('Please enter a  city');
   }
 };
 
@@ -32,14 +32,14 @@ var buttonClickHandler = function (event) {
   }
 };
 
-var getUserRepos = function (user) {
-  var apiUrl = 'https://www.loc.gov/' + user + '/repos';
+var getCityInfo = function (city,format) {
+  var apiUrl = 'https://www.loc.gov/' + format+'/fa=location:'+ city + '/repos'+'&fo=json';
 
   fetch(apiUrl)
     .then(function (response) {
       if (response.ok) {
         response.json().then(function (data) {
-          displayRepos(data, user);
+          displayRepos(data, city);
         });
       } else {
         alert('Error: ' + response.statusText);
